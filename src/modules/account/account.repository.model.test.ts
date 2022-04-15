@@ -3,7 +3,7 @@ import { accountInDbToModel, accountModelToInDb } from './account.repository.mod
 
 describe('account.repository.model', () => {
   describe('accountInDbToModel', () => {
-    it('transforms an account entity to model', () => {
+    it('transforms an account in db to model', () => {
       const accountInDb = { _id: 'account1', balance: 1000 };
       expect(accountInDbToModel(accountInDb)).to.be.eql({ id: 'account1', balance: 1000 });
     });
@@ -14,7 +14,7 @@ describe('account.repository.model', () => {
   });
 
   describe('accountModelToInDb', () => {
-    it('transforms an account model to entity', () => {
+    it('transforms an account model to in db', () => {
       const account = { id: 'account1', balance: 1000 };
       expect(accountModelToInDb(account)).to.be.eql({ _id: 'account1', balance: 1000 });
     });
